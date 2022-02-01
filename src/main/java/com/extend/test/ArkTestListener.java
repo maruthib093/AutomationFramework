@@ -15,6 +15,7 @@ public class ArkTestListener implements ITestListener, IAlterSuiteListener {
         //List<String> groupMasterList = Arrays.asList("editQuoteLine", "addQuoteLine");
         List<String> groupMasterList = Arrays.asList("login", "signup");
         String commitMsg = System.getProperty("commitMsg", "edit login etc addQuoteLine");
+         System.out.println("commitMsg : " + commitMsg);
         String[] words = commitMsg.split(" ");
         List<String> groups = new ArrayList<>();
         for (String word : words) {

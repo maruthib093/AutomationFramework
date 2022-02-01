@@ -17,8 +17,10 @@ public class TestClass extends BaseTest {
         loginTest.info("step3");
         loginTest.info("step4");
         loginTest.pass("step5");
-        loginTest.fail("login failed");
+        AssertionError login_failed = new AssertionError("Login failed");
+        loginTest.fail(login_failed);
         extent.flush();
+        throw login_failed;
     }
 
     @Test(groups = {"signup"})

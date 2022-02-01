@@ -10,7 +10,7 @@ public class BaseTest {
 
     BaseTest (){
         extent = new ExtentReports();
-        ExtentSparkReporter spark = new ExtentSparkReporter("target/Spark.html");
+        ExtentSparkReporter spark = new ExtentSparkReporter("target/reports/index.html");
         extent.attachReporter(spark);
         spark.config().setTheme(Theme.DARK);
         spark.config().setDocumentTitle("MyReport");
